@@ -1,61 +1,155 @@
 import React from 'react';
 
 class Buttons extends React.Component {
-  state = { input: '' };
   render() {
     return (
       <>
-        <button value="1" onClick={this.handleClick}>
-          1
-        </button>
-        <button value="2" onClick={this.handleClick}>
-          2
-        </button>
-        <button value="3" onClick={this.handleClick}>
-          3
-        </button>
-        <button value="4" onClick={this.handleClick}>
-          4
-        </button>
-        <button value="5" onClick={this.handleClick}>
-          5
-        </button>
-        <button value="6" onClick={this.handleClick}>
-          6
-        </button>
-        <button value="7" onClick={this.handleClick}>
-          7
-        </button>
-        <button value="8" onClick={this.handleClick}>
-          8
-        </button>
-        <button value="9" onClick={this.handleClick}>
-          9
-        </button>
-        <button value="0" onClick={this.handleClick}>
-          0
-        </button>
-        <button value="." onClick={this.handleClick}>
-          .
-        </button>
-        <button value="*" onClick={this.handleClick}>
-          *
-        </button>
-        <button value="-" onClick={this.handleClick}>
-          -
-        </button>
-        <button value="+" onClick={this.handleClick}>
-          +
-        </button>
-        <button value="/" onClick={this.handleClick}>
-          /
-        </button>
-        <button value="c" onClick={this.props.clearCalculation}>
-          C
-        </button>
-        <button value="back" onClick={this.props.deleteLastInput}>
-          B
-        </button>
+        <div id="wrapper">
+          <button
+            value="1"
+            onClick={this.handleClick}
+            className="button1"
+            id="button"
+          >
+            1
+          </button>
+          <button
+            value="2"
+            onClick={this.handleClick}
+            className="button2"
+            id="button"
+          >
+            2
+          </button>
+          <button
+            value="3"
+            onClick={this.handleClick}
+            className="button3"
+            id="button"
+          >
+            3
+          </button>
+          <button
+            value="4"
+            onClick={this.handleClick}
+            className="button4"
+            id="button"
+          >
+            4
+          </button>
+          <button
+            value="5"
+            onClick={this.handleClick}
+            className="button5"
+            id="button"
+          >
+            5
+          </button>
+          <button
+            value="6"
+            onClick={this.handleClick}
+            className="button6"
+            id="button"
+          >
+            6
+          </button>
+          <button
+            value="7"
+            onClick={this.handleClick}
+            className="button7"
+            id="button"
+          >
+            7
+          </button>
+          <button
+            value="8"
+            onClick={this.handleClick}
+            className="button8"
+            id="button"
+          >
+            8
+          </button>
+          <button
+            value="9"
+            onClick={this.handleClick}
+            className="button9"
+            id="button"
+          >
+            9
+          </button>
+          <button
+            value="0"
+            onClick={this.handleClick}
+            className="button0"
+            id="button"
+          >
+            0
+          </button>
+          <button
+            value="."
+            onClick={this.handleClick}
+            className="buttondot"
+            id="button"
+          >
+            .
+          </button>
+          <button
+            value="*"
+            onClick={this.handleClick}
+            className="buttonmul"
+            id="button"
+          >
+            *
+          </button>
+          <button
+            value="-"
+            onClick={this.handleClick}
+            className="buttonminus"
+            id="button"
+          >
+            -
+          </button>
+          <button
+            value="+"
+            onClick={this.handleClick}
+            className="buttonadd"
+            id="button"
+          >
+            +
+          </button>
+          <button
+            value="/"
+            onClick={this.handleClick}
+            className="buttondivide"
+            id="button"
+          >
+            /
+          </button>
+          <button
+            value="c"
+            onClick={this.props.clearCalculation}
+            className="buttonclear"
+            id="button"
+          >
+            C
+          </button>
+          <button
+            value="back"
+            onClick={this.props.deleteLastInput}
+            className="buttonb"
+            id="button"
+          >
+            B
+          </button>
+          <button
+            value="="
+            onClick={this.props.returnVal}
+            className="buttonequals"
+            id="button"
+          >
+            =
+          </button>
+        </div>
       </>
     );
   }

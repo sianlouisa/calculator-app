@@ -2,7 +2,90 @@
   text-align: center;
 }
 
-.leaflet-container {
-  height: 400px;
-  width: 100%;
+#wrapper {
+  display: grid;
+  width: 500px;
+  height: 500px;
+}
+
+#button {
+  display: inline-grid;
+  border: 1px solid black;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.button1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.button2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.button3 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+.button4 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.button5 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.button6 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+.button7 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+.button8 {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+.button9 {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+.button0 {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+.buttondot {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+.buttonb {
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+.buttonmul {
+  grid-column-start: 4;
+  grid-row-start: 1;
+}
+.buttonminus {
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+.buttonadd {
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+.buttondivide {
+  grid-column-start: 4;
+  grid-row-start: 4;
+}
+.buttonclear {
+  grid-column-start: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.buttonequals {
+  grid-column-start: 5;
+  grid-row-start: 3;
+  grid-row-end: 5;
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from './component/Button';
 import Buttons from './component/Buttons';
 import Display from './component/Display';
 import './App.css';
@@ -19,8 +18,9 @@ class App extends Component {
           getCalculation={this.getCalculation}
           clearCalculation={this.clearCalculation}
           deleteLastInput={this.deleteLastInput}
+          returnVal={this.returnVal}
+          value={this.state.calculation}
         />
-        <Button returnVal={this.returnVal} value={this.state.calculation} />
       </div>
     );
   }
@@ -64,10 +64,12 @@ class App extends Component {
   getCalculation = input => {
     const calculation = this.state.calculation;
     calculation.push(input);
-    console.log(calculation);
-    this.setState({
-      calculation,
-    });
+    this.setState(
+      {
+        calculation,
+      },
+      () => this.saveData,
+    );
   };
 
   deleteLastInput = () => {
