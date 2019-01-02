@@ -53,6 +53,9 @@ class Buttons extends React.Component {
         <button value="c" onClick={this.props.clearCalculation}>
           C
         </button>
+        <button value="back" onClick={this.props.deleteLastInput}>
+          B
+        </button>
       </>
     );
   }

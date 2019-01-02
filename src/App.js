@@ -3,6 +3,7 @@ import Button from './component/Button';
 import Buttons from './component/Buttons';
 import Display from './component/Display';
 import './App.css';
+import math from 'mathjs';
 
 class App extends Component {
   state = {
@@ -17,8 +18,9 @@ class App extends Component {
         <Buttons
           getCalculation={this.getCalculation}
           clearCalculation={this.clearCalculation}
+          deleteLastInput={this.deleteLastInput}
         />
-        <Button returnVal={this.returnVal} />
+        <Button returnVal={this.returnVal} value={this.state.calculation} />
       </div>
     );
   }
@@ -31,7 +33,8 @@ class App extends Component {
   };
 
   returnVal = () => {
-    const result = this.state.calculation.join('');
+    let result = this.state.calculation.join('');
+    console.log(result);
     // refactor with regex
     if (
       (result[0] === '*') |
@@ -44,23 +47,35 @@ class App extends Component {
       (result.slice(-1)[0] === '-')
     ) {
       this.setState({
-        calculation: result,
+        calculation: this.state.calculation,
         error: 'Invalid Calculation',
       });
-    } else
+    } else {
+      result = math.eval(result);
       this.setState(
         {
-          calculation: eval(result),
+          calculation: [result],
         },
         () => this.saveData,
       );
+    }
   };
 
   getCalculation = input => {
     const calculation = this.state.calculation;
     calculation.push(input);
+    console.log(calculation);
     this.setState({
       calculation,
+    });
+  };
+
+  deleteLastInput = () => {
+    const calculation = this.state.calculation;
+    calculation.pop();
+    this.setState({
+      calculation,
+      error: '',
     });
   };
 

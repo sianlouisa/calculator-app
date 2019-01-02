@@ -1,12 +1,13 @@
 import React from 'react';
 
 const Display = props => {
+  const stringResult = props.input;
   if (props.error.length === 0) {
-    return <p>{props.input}</p>;
+    return <p>{stringResult}</p>;
   } else
     return (
       <>
-        <p>{props.input}</p>
+        <p>{stringResult}</p>
         <p>{props.error}</p>
       </>
     );
